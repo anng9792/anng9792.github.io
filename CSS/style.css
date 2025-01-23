@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'GTProelium';
+    src: url('/fonts/GTProelium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'GTProelium', Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    color: black;
+}
+
+h1 {
+    font-family: 'GTProelium', Arial, Helvetica, sans-serif;
+}
