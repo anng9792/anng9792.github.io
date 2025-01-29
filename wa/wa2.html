@@ -4,11 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello Me</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+    @font-face {
+    font-family: 'gt_proeliumbold';
+    src: url('../fonts/gtproelium-webfont.woff2') format('woff2'),
+         url('../fonts/gtproelium-webfont.woff') format('woff'),
+         url('../fonts/GTProelium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    }
+    @font-face {
+    font-family: 'tt_chocolates_trllight';
+    src: url('../fonts/TTChocoLightKit/tt_chocolates_trial_light-webfont.woff2') format('woff2'),
+         url('../fonts/TTChocoLightKit/tt_chocolates_trial_light-webfont.woff') format('woff'),
+         url('../fonts/TTChocoLightKit/') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
+
+}
+    p {
+        font-family: 'tt_chocolates_trllight', Fallback, sans-serif;
+        font-size: 12px; 
+    }
+
+    h2 {
+        font-family: 'tt_chocolates_trllight', Fallback, sans-serif;
+        font-size: 25px; 
+    }
+
+        h1 {
+            font-family: 'gt_proeliumbold', Fallback, sans-serif;
+            font-size: 60px;
+        }
+    </style>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
         <body>
-            <h1>Hi, I'm Angelli!</h1>
-            <h2>She/her</h2>
+            <h1>
+                
+                Hi, I'm Angelli!</h1>
+            <h2><strong>She/her</strong></h2>
             <p>
                 <img src="/img/headshot1.JPG" alt="headshot1" height="404" width="270" >
             </p>
