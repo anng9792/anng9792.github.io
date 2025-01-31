@@ -8,6 +8,56 @@
             max-width: 1350px;
             margin: 0 auto;
         }
+
+        @font-face {
+    font-family: 'gt_proeliumbold';
+    src: url('../fonts/gtproelium-webfont.woff2') format('woff2'),
+         url('../fonts/gtproelium-webfont.woff') format('woff'),
+         url('../fonts/GTProelium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'tt_chocolates_trllight';
+    src: url('../fonts/TTChocoLightKit/tt_chocolates_trial_light-webfont.woff2') format('woff2'),
+         url('../fonts/TTChocoLightKit/tt_chocolates_trial_light-webfont.woff') format('woff'),
+         url('../fonts/TTChocoLightKit/') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    }
+    @font-face {
+    font-family: 'made_tommy_softregular';
+    src: url('made_tommy_soft_regular_personal_use-webfont.woff2') format('woff2'),
+         url('made_tommy_soft_regular_personal_use-webfont.woff') format('woff'),
+    font-weight: normal;
+    font-style: normal;
+
+    }
+
+    .my_text
+            {
+                font-family:    Arial, Helvetica, sans-serif;
+            }
+
+    h1 {
+        font-family: 'gt_proeliumbold', Fallback, sans-serif;
+        font-size: 60px; 
+    }
+
+    h3 {
+        font-family: 'made_tommy_softregular', Fallback, sans-serif;
+        font-size: 20px; 
+    }
+
+    h2 {
+        font-family: 'made_tommy_softregular', Fallback, sans-serif;
+    }
+
+p {
+    font-family: 'made_tommy_softregular', Fallback, sans-serif;
+}
+
     </style>
     <title>Encyclopedia</title>
 </head>
@@ -15,41 +65,43 @@
     <h1 ALIGN="Center">High Fashion vs. Commercial Fashion Photography</h1>
     <h3 ALIGN="Center">by Angelli Nguyen</h3>
 <hr>
-    <div ALIGN="Center">
+<p>
+    <div ALIGN="Center" class="my_text">
         <a href="#Introduction">Introduction</a>
     </div>
 
-    <div ALIGN="Center">
+    <div ALIGN="Center" class="my_text">
         <a href="#Definition">Definition & Purpose</a>
     </div>
 
-    <div ALIGN="Center">
+    <div ALIGN="Center" class="my_text">
         <a href="#Aesthetics">Aesthetic Differences</a>
     </div>
 
-    <div ALIGN="Center">
+    <div ALIGN="Center" class="my_text">
         <a href="#Lighting">Lighting & Composition</a>
     </div>
 
-    <div ALIGN="Center">
+    <div ALIGN="Center" class="my_text">
         <a href="#Models">Model Casting</a>
     </div>
 
-    <div ALIGN="Center">
+    <div ALIGN="Center" class="my_text">
         <a href="#Post">Post-Production & Retouching</a>
     </div>
 
-    <div ALIGN="Center">
+    <div ALIGN="Center" class="my_text">
         <a href="#Overlap">Overlapping Elements</a>
     </div>
 
-    <div ALIGN="Center">
+    <div ALIGN="Center" class="my_text">
         <a href="#Industry">Industry Opportunities</a>
     </div>
     
-    <div ALIGN="Center">
+    <div ALIGN="Center" class="my_text">
         <a href="#Conclusion">Conclusion</a>
     </div>
+    </p>
 <hr>
     <div id="Introduction">
         <h2>Introduction</h2>
@@ -61,36 +113,42 @@
         <h3>High Fashion Photography
         </h3>
         <p>High fashion photography is an art-driven form of photography that showcases designer clothing, accessories, and concepts in an extravagant, imaginative, and often surreal manner. The goal is to push artistic boundaries, create a sense of exclusivity, and craft editorial images that evoke strong emotions or narratives. This type of photography is commonly seen in high-end fashion magazines such as Vogue, Harper’s Bazaar, and Elle.</p>
+        <div>
         <p>Notable high fashion photographers include:
-            <ul>
+            <ul class="my_text">
                 <li>Ruo Bing Li</li>
                 <li>Greg Swales</li>
                 <li>Calvin Pausania</li>
                 <li>Melissa Cartagena</li>
             </ul>
         </p>
+        </div>
+        <div ALIGN="Center">
         <p>
             <img src="../img/wa3/ruobingli.jpg" alt="Ruo Bing Li's Work" height="300" width="250">
             <img src="../img/wa3/gregswales.png" alt="Greg Swales' Work" height="300" width="220">
             <img src="../img/wa3/perazna.png" alt="Melissa Cartagena's Work" height="300" width="230">
             <img src="../img/wa3/calvin.png" alt="Calvin Pausania's Work" height="300" width="230">
         </p>
+        </div>
         <h3>Commercial Fashion Photography</h3>
         <p>Commercial fashion photography, on the other hand, is focused on selling clothing and accessories in a way that appeals to a broad audience. The images are polished, clear, and engaging, designed to highlight the product rather than the artistic concept behind it. Commercial photography can be found in advertisements, e-commerce websites, and catalogs for brands like Target, H&M, and Nike.</p>
         <p>Prominent commercial fashion photographers include:
-            <ul>
+            <ul class="my_text">
                 <li>Lara Jade</li>
                 <li>Beth Sternbaum</li>
                 <li>Emilynn Rose</li>
                 <li>Shan Benson</li>
             </ul>
         </p>
+        <div ALIGN="Center">
         <p>
             <img src="../img/wa3/larajade.jpg" alt="Lara Jade's Work" height="300" width="530">
             <img src="../img/wa3/bethsternbaum.png" alt="Beth Sternbaum's Work" height="300" width="430">
             <img src="../img/wa3/emilynnrose.jpg" alt="Emilynn Rose's Work" height="300" width="440">
             <img src="../img/wa3/shanbenson.png" alt="Shan Benson's Work" height="300" width="450">
         </p>
+        </div>
     </div>
 <hr>
     <div id="Aesthetic">
@@ -100,15 +158,19 @@
             High fashion photography is known for its avant-garde approach, often exaggerating clothing and styling in unconventional ways. Bold makeup and dramatic hair choices add to the artistic expression, making the images feel more like conceptual art than simple fashion showcases. The compositions are experimental, featuring unusual angles, abstract poses, and surreal settings that prioritize storytelling over realism. Louis Vuitton’s December campaign collaboration with Takashi Murakami and Zendaya, for example, embeds the model in a vibrant and cartoonish scenescape in unconventional elongated poses 
             (<a href="https://us.louisvuitton.com/eng-us/stories/louisvuittonxmurakami">Louis Vuitton X Murakami, 2024</a>).
         </p>
+        <div ALIGN="Center">
         <p>
             <img src="../img/wa3/zendaya.jpg" alt="Zendaya for Louis Vuitton X Murakami" height="300" width="565">
         </p>
+        </div>
         <h3>Commercial Aesthetics</h3>
         <p>Commercial fashion photography, on the other hand, focuses on clarity and accessibility. Clean, minimalist backgrounds keep attention on the clothing, while natural lighting aligns with traditional beauty standards. Models appear relaxed and relatable, often smiling or engaging naturally with the product. The goal is to make the clothing desirable and wearable rather than purely artistic. H&M’s advertising campaigns, for instance, use bright, neutral backgrounds and realistic styling to appeal to everyday shoppers 
             (<a href="https://www2.hm.com/en_us/kids/campaigns/6000-holiday-2024-kids-e.html">H&M Holiday 2024 Kids, 2024</a>).</p>
-        <p>
+            <div ALIGN="Center">
+            <p>
             <img src="../img/wa3/hm.png" alt="H&M Holiday 2024 Campaign" height="300" width="220">
         </p>
+        </div>
         </div>
 <hr>
     <div id="Lighting">
@@ -116,16 +178,19 @@
         <h3>High Fashion Lighting & Composition</h3>
         <p>High fashion photography embraces dramatic lighting techniques, often using high contrast, colored gels, or chiaroscuro effects to enhance mood. Unique camera angles—such as low perspectives, extreme close-ups, or distorted framing—help create striking, unconventional visuals. Many high-fashion photographers incorporate fine art influences, borrowing from painting, sculpture, and surrealism to craft editorial spreads. Nick Knight’s work for SHOWstudio, for example, frequently uses extreme lighting contrasts and abstract compositions to push creative boundaries 
             (<a href="https://www.canon-europe.com/pro/stories/fashion-photography-lighting-tips/">Canon Europe</a>).</p>
+            <div ALIGN="Center">
             <p>
                 <img src="../img/wa3/ian.jpg" alt="Ian Hippolyte's Work" height="300" width="225">
             </p>
-            
+            </div>
             <h3>Commercial Lighting & Composition</h3>
             <p>In commercial fashion photography, lighting is typically soft and even, ensuring the clothing remains the focal point. Symmetrical, eye-level compositions create a balanced and approachable look, while close-up shots highlight fabric details and fit. The focus is on realism and clarity, making the product as appealing and true-to-life as possible. Victoria’s Secret campaigns, for example, use warm, flattering lighting to enhance the natural beauty of their models while keeping the product front and center 
                 (<a href="https://anneofcarversville.com/body-politics/2023/2/25/victorias-secret-bras-by-angelo-pennetta">Victoria’s Secret Bras, 2023</a>).</p>
-            <p>
+                <div ALIGN="Center">
+                <p>
                 <img src="../img/wa3/victoriasecret.png" height="300" width="405">
             </p>
+            </div>
             </div>
 <hr>
     <div id="Models">
@@ -133,43 +198,55 @@
         <h3>High Fashion Models</h3>
         <p>High fashion models are often chosen for their unconventional looks, featuring striking or asymmetrical features that align with the avant-garde nature of the imagery. Expressions tend to be serious, dramatic, or distant, reinforcing the artistic and conceptual nature of the shoot. Michael Kors' spring/summer 2024 runway, for example, frequently feature models with minimal expression, allowing the focus to remain on the clothing’s sculptural and avant-garde qualities 
             (<a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.harpersbazaar.com%2Fuk%2Ffashion%2Fshows-trends%2Fa45124017%2Fmichael-kors-spring-summer-2024%2F&psig=AOvVaw0TsJ_yFh8PhesV-x__EOkb&ust=1738346208944000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCOjoqr6CnosDFQAAAAAdAAAAABAZ">Michael Kors Spring/Summer, 2024</a>).</p>
-        <p>
+            <div ALIGN="Center">
+            <p>
             <img src="../img/wa3/highfashionmodels.jpg" alt="High fashion models" height="300" width="460">
         </p>
+        </div>
             <h3>Commercial Models</h3>
         <p>Commercial fashion models typically fit within mainstream beauty standards and exude warmth and relatability. Expressions are friendly and inviting, often showcasing movement or interaction with the product. This approach makes the clothing feel more wearable and aspirational to a broad audience. Target's athleticwear campaigns, for instance, often feature models in action, emphasizing the brand’s energetic and performance-driven image 
             (<a href="https://corporate.target.com/news-features/article/2020/01/all-in-motion">New Year, New Us: Target’s Newest Brand Celebrates the Joy of Movement for ALL Families, 2020</a>).</p>
-        <p>
+            <div ALIGN="Center">
+                <p>
             <img src="../img/wa3/target.jpg" alt="Target Athleticwear Campaign" height="300" width="260">
         </p>
+        </div>
         </div>
 <hr>
     <div id="Post">
         <h2>Post-Production & Retouching</h2>
         <h3>High Fashion Post-Production</h3>
         <p>High fashion photography often involves heavy post-processing to enhance the artistic vision. Color grading can be dramatic, creating surreal, muted, neon, or desaturated tones to evoke a specific mood. Digital manipulation is frequently used to alter backgrounds, body proportions, or other elements to fit a conceptual theme.</p>
-        <p>
+        <div ALIGN="Center">
+            <p>
             <img src="../img/wa3/highfashionretouch.jpg" alt="High Fashion Beauty Retouching" height="300" width="530">
         </p>
+        </div>
         <h3>Commercial Post-Production</h3>
         <p>In commercial photography, post-production is minimal, primarily focusing on skin smoothing, color correction, and overall polish. The goal is to keep products looking realistic and appealing without distorting their actual appearance.</p>
-        <p>
+        <div ALIGN="Center">
+            <p>
             <img src="../img/wa3/cvs.jpg" alt="CVS Unretouched Beauty Campsign" height="300" width="510">
         </p>
+        </div>
     </div>
 <hr>
     <div id="Overlap">
         <h2>Overlapping Elements</h2>
         <p>Some brands blur the line between high fashion and commercial photography, combining elements of both to create unique campaigns. Skims, for example, has gained attention for its inclusive advertising, featuring models of all body types, ages, and backgrounds. While the brand primarily sells everyday shapewear and loungewear, its campaigns adopt a high-fashion edge through minimalist styling, sleek monochrome aesthetics, elaborate set design, and striking compositions. By blending commercial accessibility with high-fashion sophistication, Skims positions itself as both an aspirational and relatable brand.
-<p>
+            <div ALIGN="Center">
+                <p>
     <img src="../img/wa3/skims.jpg" alt="Skims Campaign" height="300" width="380">
 </p>
+</div>
             <p>Zara, on the other hand, has embraced an unconventional approach to styling and posing in its fashion campaigns. Rather than the traditional clean-cut commercial look, Zara’s imagery often features models in offbeat, abstract poses, evoking an editorial feel. The use of dramatic angles, asymmetrical compositions, and a slightly surreal quality gives the brand a high-fashion sensibility while still catering to a mass-market audience. This balance allows Zara to stand out in the fast-fashion industry while maintaining a broad appeal 
             (<a href="https://www.dailymail.co.uk/femail/article-6509411/Zara-mocked-shoppers-model-poses-jacket-BACKWARDS.html">Zara is mocked for online catalogue with models in bizarre poses that make it impossible to tell what the clothes look like - including one wearing a coat BACKWARDS, 2018</a>).</p>
                 </p>
-<p>
+                <div ALIGN="Center">
+                    <p>
     <img src="../img/wa3/zara.jpg" alt="Zara Posing" height="300" width="500">
 </p>
+</div>
         </div>
 <hr>
     <div id="Industry">
@@ -187,7 +264,7 @@
     <hr>
     <div>
         <h3>See also...</h3>
-        <ul>
+        <ul class="my_text">
             <li><a href="https://dannydmann.github.io/wa/wa3.html">Future House Music</a></li>
             <li><a href="https://kelsey2525.github.io/wa/wa3.html">The Greatest Showman Movie</a></li>
             <li><a href="https://anikaseter.github.io/wa/wa3.html">BTS</a></li>
