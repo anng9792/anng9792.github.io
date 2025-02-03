@@ -3,10 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wa3.css">
     <style>
-        body{
-            max-width: 1350px;
-            margin: 0 auto;
+        html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+        }
+        body {
+            margin-left: 0px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0px auto;
+        }
+
+        .toc {
+            width: 1500px; /* Adjust this to your desired width */
+            padding: 0;
+            text-align: left; /* Align TOC items to the left */
+            margin-right: 0px; /* Space between TOC and content */
+        }
+
+        .content {
+            
+            margin-left: 20px; /* Optional: Adds some space between TOC and content */
+            flex-grow: 1; /* Allow the content section to take the remaining space */
+        }
+
+        h1 {
+    text-align: center; /* Ensure the title and author are centered */
+}
+
+
+        .title-container {
+            text-align: center;  /* Center align the title */
+            margin-top: 20px;     /* Space between top and title */
         }
 
         @font-face {
@@ -62,10 +102,30 @@ p {
     <title>Encyclopedia</title>
 </head>
 <body>
-    <h1 ALIGN="Center">High Fashion vs. Commercial Fashion Photography</h1>
-    <h3 ALIGN="Center">by Angelli Nguyen</h3>
+    <div class="title-container">
+        <h1>High Fashion vs. Commercial Fashion Photography</h1>
+        <h3>by Angelli Nguyen</h3>
+        <hr>
+    </div>
+    
 <hr>
-<p>
+    <div class="container">
+        <nav class="toc">
+            <h2>Table of Contents</h2>
+            <ul class="my_text">
+                <li><a href="#Introduction">Introduction</a></li>
+                <li><a href="#Definition">Definition & Purpose</a></li>
+                <li><a href="#Aesthetics">Aesthetic Differences</a></li>
+                <li><a href="#Lighting">Lighting & Composition</a></li>
+                <li><a href="#Models">Model Casting</a></li>
+                <li><a href="#Post">Post-Production & Retouching</a></li>
+                <li><a href="#Overlap">Overlapping Elements</a></li>
+                <li><a href="#Industry">Industry Opportunities</a></li>
+                <li><a href="#Conclusion">Conclusion</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+    <!--
     <div ALIGN="Center" class="my_text">
         <a href="#Introduction">Introduction</a>
     </div>
@@ -101,15 +161,18 @@ p {
     <div ALIGN="Center" class="my_text">
         <a href="#Conclusion">Conclusion</a>
     </div>
-    </p>
-<hr>
+-->
+
+<div class="content">
     <div id="Introduction">
         <h2>Introduction</h2>
+        <hr>
         <p>Photography plays a crucial role in shaping the fashion industry, but not all fashion photography serves the same purpose. High fashion photography and commercial fashion photography differ significantly in their aesthetic, intent, and execution. While high fashion photography often embraces avant-garde, artistic expression, and conceptual storytelling, commercial fashion photography prioritizes accessibility, branding, and mass-market appeal. These two branches of photography influence consumer culture and shape the visual identity of brands across the fashion spectrum.</p>
     </div>
-<hr>
+<br>
     <div id="Definition">
         <h2>Definition & Purpose</h2>
+        <hr>
         <h3>High Fashion Photography
         </h3>
         <p>High fashion photography is an art-driven form of photography that showcases designer clothing, accessories, and concepts in an extravagant, imaginative, and often surreal manner. The goal is to push artistic boundaries, create a sense of exclusivity, and craft editorial images that evoke strong emotions or narratives. This type of photography is commonly seen in high-end fashion magazines such as Vogue, Harper’s Bazaar, and Elle.</p>
@@ -150,9 +213,10 @@ p {
         </p>
         </div>
     </div>
-<hr>
-    <div id="Aesthetic">
+<br>
+    <div id="Aesthetics">
         <h2>Aesthetic Differences</h2>
+        <hr>
         <h3>High Fashion Aesthetics</h3>
         <p>
             High fashion photography is known for its avant-garde approach, often exaggerating clothing and styling in unconventional ways. Bold makeup and dramatic hair choices add to the artistic expression, making the images feel more like conceptual art than simple fashion showcases. The compositions are experimental, featuring unusual angles, abstract poses, and surreal settings that prioritize storytelling over realism. Louis Vuitton’s December campaign collaboration with Takashi Murakami and Zendaya, for example, embeds the model in a vibrant and cartoonish scenescape in unconventional elongated poses 
@@ -172,9 +236,10 @@ p {
         </p>
         </div>
         </div>
-<hr>
+        <br>
     <div id="Lighting">
         <h2>Lighting & Composition</h2>
+        <hr>
         <h3>High Fashion Lighting & Composition</h3>
         <p>High fashion photography embraces dramatic lighting techniques, often using high contrast, colored gels, or chiaroscuro effects to enhance mood. Unique camera angles—such as low perspectives, extreme close-ups, or distorted framing—help create striking, unconventional visuals. Many high-fashion photographers incorporate fine art influences, borrowing from painting, sculpture, and surrealism to craft editorial spreads. Nick Knight’s work for SHOWstudio, for example, frequently uses extreme lighting contrasts and abstract compositions to push creative boundaries 
             (<a href="https://www.canon-europe.com/pro/stories/fashion-photography-lighting-tips/">Canon Europe</a>).</p>
@@ -192,9 +257,10 @@ p {
             </p>
             </div>
             </div>
-<hr>
+            <br>
     <div id="Models">
         <h2>Model Casting</h2>
+        <hr>
         <h3>High Fashion Models</h3>
         <p>High fashion models are often chosen for their unconventional looks, featuring striking or asymmetrical features that align with the avant-garde nature of the imagery. Expressions tend to be serious, dramatic, or distant, reinforcing the artistic and conceptual nature of the shoot. Michael Kors' spring/summer 2024 runway, for example, frequently feature models with minimal expression, allowing the focus to remain on the clothing’s sculptural and avant-garde qualities 
             (<a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.harpersbazaar.com%2Fuk%2Ffashion%2Fshows-trends%2Fa45124017%2Fmichael-kors-spring-summer-2024%2F&psig=AOvVaw0TsJ_yFh8PhesV-x__EOkb&ust=1738346208944000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCOjoqr6CnosDFQAAAAAdAAAAABAZ">Michael Kors Spring/Summer, 2024</a>).</p>
@@ -212,9 +278,10 @@ p {
         </p>
         </div>
         </div>
-<hr>
+        <br>
     <div id="Post">
         <h2>Post-Production & Retouching</h2>
+        <hr>
         <h3>High Fashion Post-Production</h3>
         <p>High fashion photography often involves heavy post-processing to enhance the artistic vision. Color grading can be dramatic, creating surreal, muted, neon, or desaturated tones to evoke a specific mood. Digital manipulation is frequently used to alter backgrounds, body proportions, or other elements to fit a conceptual theme.</p>
         <div ALIGN="Center">
@@ -230,9 +297,10 @@ p {
         </p>
         </div>
     </div>
-<hr>
+    <br>
     <div id="Overlap">
         <h2>Overlapping Elements</h2>
+        <hr>
         <p>Some brands blur the line between high fashion and commercial photography, combining elements of both to create unique campaigns. Skims, for example, has gained attention for its inclusive advertising, featuring models of all body types, ages, and backgrounds. While the brand primarily sells everyday shapewear and loungewear, its campaigns adopt a high-fashion edge through minimalist styling, sleek monochrome aesthetics, elaborate set design, and striking compositions. By blending commercial accessibility with high-fashion sophistication, Skims positions itself as both an aspirational and relatable brand.
             <div ALIGN="Center">
                 <p>
@@ -248,19 +316,22 @@ p {
 </p>
 </div>
         </div>
-<hr>
+        <br>
     <div id="Industry">
         <h2>Industry Opportunities</h2>
+        <hr>
         <h3>High Fashion Careers</h3>
         <p>High fashion photography requires a strong artistic vision and extensive networking with designers, editors, and art directors. Success in this field is often defined by editorial spreads, runway campaigns, and gallery exhibitions. Recognition from major fashion houses or publications is crucial for building a career in this space. This market is generally more narrow and difficult to excel in due to lower demand and exclusivity.</p>
         <h3>Commercial Careers</h3>
         <p>Commercial fashion photography offers a more stable income, as it involves working closely with advertising agencies, brands, and marketing teams. Many commercial photographers transition into videography, branding, or e-commerce work, providing consistent opportunities in the industry. While it may not always be as experimental as high fashion, it remains a critical part of fashion marketing and business strategy.</p>
     </div>
-<hr>
+    <br>
     <div id="Conclusion">
         <h2>Conclusion</h2>
+        <hr>
         <p>Both high fashion and commercial photography are essential to the fashion industry, serving different audiences and purposes. High fashion photography thrives on artistic expression, pushing boundaries, and crafting striking visuals that influence trends and culture. Commercial fashion photography, in contrast, aims to be accessible and market-driven, showcasing products in a way that appeals to a broad consumer base. While the two styles differ, they often overlap in modern marketing as brands seek to balance aspirational artistry with commercial viability.</p>
     </div>
+    <br>
     <hr>
     <div>
         <h3>See also...</h3>
@@ -269,6 +340,8 @@ p {
             <li><a href="https://kelsey2525.github.io/wa/wa3.html">The Greatest Showman Movie</a></li>
             <li><a href="https://anikaseter.github.io/wa/wa3.html">BTS</a></li>
         </ul>
+    </div>
+    </div>
     </div>
 </body>
 </html>
