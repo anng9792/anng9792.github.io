@@ -1,0 +1,136 @@
+/* General styles - put these straight into your stylesheet */
+
+.card body {
+  margin: 0;
+}
+
+html {
+  font-family: 'Helvetica neue', Arial, 'sans serif';
+  font-size: 10px;
+  background-color: #ccc;
+}
+
+.card h2 {
+  font-size: 2em; /* 20px */
+  line-height: 1.75em; /* 30px */
+}
+
+.card p {
+}
+
+.card h2, p {
+  margin: 0;
+}
+
+.card {
+  width: 35em;
+  height: 22em;
+  margin: 5em auto;
+  background-color: red;
+  border: 0.2em solid black;
+  border-radius: 1.5em;
+}
+
+.card header, footer {
+  height: 3em; /* 30px */
+  padding: 1em; /* 10px */
+}
+
+.card header {
+  background-image: linear-gradient(to bottom,rgba(0,0,0,0.1), rgba(0,0,0,0));
+  border-radius: 1.5em 1.5em 0 0;
+}
+
+.card footer {
+  background-image: linear-gradient(to bottom,rgba(0,0,0,0), rgba(0,0,0,0.1));
+  border-radius: 0 0 1.5em 1.5em;
+}
+
+.card footer p {
+  line-height: 2em; /* 30px */
+  font-size: 1.5em; /* 15px */
+}
+
+.card article {
+  height: 12em; /* 120px */
+  background-color: rgba(0, 0, 0, 0.3);
+  line-height: 1.4em; /* 14px */
+}
+
+.card article p {
+  color: white;
+  padding: 1em; /* 10px */
+}
+
+.card article img {
+  max-height: 100%;
+  float: right;
+}
+
+/* General styles - put these straight into your stylesheet */
+
+.card2 body {
+  margin: 0;
+}
+
+html {
+  font-family: 'Helvetica neue', Arial, 'sans serif';
+  font-size: 10px;
+  background-color: #ccc;
+}
+
+.card2 h2 {
+  font-size: 2em; /* 20px */
+  line-height: 1.75em; /* 30px */
+  color: rgb(168, 140, 121);
+}
+
+.card2 h2, p {
+  margin: 0;
+}
+
+.card2 {
+  width: 35em;
+  height: 22em;
+  margin: 5em auto;
+  background-color: rgb(224, 204, 190);
+  border: 0em solid rgb(255, 255, 255);
+  border-radius: 1.5em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card2 header, footer {
+  height: 3em; /* 30px */
+  padding: 1em; /* 10px */
+}
+
+.card2 header {
+  background-color: white;
+  border-radius: 1.5em 1.5em 0 0;
+}
+
+.card2 footer {
+  background-color: white;  
+  border-radius: 0 0 1.5em 1.5em;
+}
+
+.card2 footer p {
+  line-height: 1.75em; /* 30px */
+  font-size: 1.5em; /* 15px */
+  color: rgb(188, 162, 144);
+}
+
+.card2 article {
+  height: 12em; /* 120px */
+  line-height: 1.4em; /* 14px */
+}
+
+.card2 article p {
+  color: white;
+  padding: 1em; /* 10px */
+}
+
+.card2 article img {
+  max-height: 100%;
+  float: right;
+}
