@@ -1,0 +1,90 @@
+body{
+    background-color: olive;
+}
+
+
+.flex-parent{
+    background-color: orangered;
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 
+}
+#flex-parent div{
+}
+
+#flex-child1{
+     order: 3;
+}
+#flex-child2{
+    order: 4;
+}
+#flex-child3{
+    order: 2;
+}
+#flex-child4{
+  order: 1;
+}
+
+
+#grid-parent{
+    padding:5vw 5vh;
+    margin:5vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    grid-template-rows: repeat(4,100px);
+    background-color: rgb(143, 162, 185);
+    border-radius: 15px;
+
+}
+
+.button {
+    background-color: rgb(201, 197, 197);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 50px;
+    font-weight: bold;
+}
+#no0{
+    grid-column: 2 / span 1;
+}
+#no1{
+    background-color: rgb(201, 197, 197);
+
+}
+#no2{
+    background-color: rgb(201, 197, 197);
+
+}
+#no3{
+    background-color: rgb(201, 197, 197);
+
+}
+#no4{
+    background-color: rgb(201, 197, 197);
+
+}
+#no5{
+    background-color: rgb(201, 197, 197);
+
+}
+#no6{
+    background-color: rgb(201, 197, 197);
+
+}
+#no7{
+    background-color: rgb(201, 197, 197);
+
+}
+#no8{
+    background-color: rgb(201, 197, 197);
+
+}
+#no9{
+    background-color: rgb(201, 197, 197);
+
+}
