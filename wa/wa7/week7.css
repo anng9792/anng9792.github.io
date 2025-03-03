@@ -2,7 +2,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: blanchedalmond;
+    background-color: rgb(255, 253, 250);
 }
 nav{
     height: 50vh;
@@ -10,27 +10,61 @@ nav{
     flex-direction: row;
     justify-content: space-between;
     height:20px;
-    background-color: blueviolet;
+    background-color: rgb(43, 42, 40);
 }
 nav a{
     width:10vw;
     text-align: center;
     text-decoration: none;
-    color:black;
+    color:rgb(255, 255, 255);
 }
 
 
-img{
-    width:30vw;
-    height: 30vh;
+#beehive {
+    width:40vw;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.5s;
 }
 
-#red-ball{
-    background-color: crimson;
-    width: 20px;
-    height:20px;
-    border-radius: 50%;
+#beehive:hover {
+    transform: scale(1.1);
+}
+#bee img{
+    width: 80px;
+    height:auto;
+    transform: scaleX(-1);
     position: absolute;
     left:5vw;
     top:0;
+    animation-name: beefly;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes beefly{
+
+    0% {
+        translate: 13vw 13vw;
+    }
+
+    15% {
+       translate: 30vw 0; 
+    }
+
+    25% {
+        translate: 60vw 20vw;
+    }
+
+    50% {
+        translate: 40vw 40vw;
+    }
+
+    75% {
+        translate: 10vw 30vw;
+    }
+
+    100% {
+        translate: 13vw 13vw;
+    }
 }
