@@ -1,6 +1,19 @@
 /* General Styles */
+@font-face {
+    font-family: 'conthrax';
+    src: url('../fonts/Conthrax-SemiBold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    }
+    @font-face {
+        font-family: 'unigeo64-regular';
+        src: url('../fonts/TT\ Hoves\ Pro\ Trial\ Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        }
+    
 body {
-    font-family: Arial, sans-serif;
+    font-family: Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     background: #111;
@@ -14,49 +27,165 @@ header {
     position: relative;
 }
 
+header h1 {
+    font-family: 'conthrax';
+
+}
+
+header {
+    font-family: 'unigeo64-regular';
+    letter-spacing: .5px;
+}
+
 main {
-    margin-top: 40px;
-    margin-left: 80px;
-    margin-right: 80px;
-    box-sizing: border-box; 
+    margin: 40px 0px;
+    box-sizing: border-box;
+    font-family: 'unigeo64-regular';
+    letter-spacing: 1px;
 }
 
 section {
-        padding: 50px;
-        margin-top: 10px;
-        color: white;
-        margin-bottom: 40px;
+    padding: 50px;
+    margin-bottom: 40px;
+    color: white;
 }
 
-.concert1 {
+.concert, .concert2, .concert3, .concert4, .concert5, .concert6, .concert7, .concert8, .concert9, .concert10 {
     background-color: #8a2be2;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin-left: 82px;
+    margin-right: 82px;
+    font-family: 'unigeo64-regular';
 }
 
-.concert2 {
-    background-color: #8a2be2;
+/* Two-Column Text Formatting */
+.concert-details {
+    column-count: 2;
+    column-gap: 30px;
+    background-color: azure;
+    padding: 20px;
+    border-radius: 5px;
+    color: #111;
 }
 
+.concert-columns {
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+    background-color: azure;
+    border-radius: 8px;
+    color: black;
+    padding-bottom: 40px;
+    padding-left: 40px;
+}
+
+/* Left and Right Column Styling */
+.left-column, .center-column, .right-column {
+    padding: 10px;
+}
+
+.left-column p, .right-column p {
+    margin: 5px 0;
+}
+
+/* Ensure list is properly styled */
+.center-column ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.right-column {
+    font-size: 20px;
+}
+
+.concert-image {
+    width: 50vw;
+    max-width: 725px;
+    position: absolute;
+    left: 11.5%;
+    top: 550px;
+}
+
+.learn-more {
+    grid-column: span 3; /* Make it take up all three columns */
+
+}
+
+.learn-more img {
+    max-width: 100%;
+    display: none; /* Hide the image by default */
+}
+
+.learn-more[open] img {
+    display: block; /* Show the image when details is expanded */
+}
+
+.learn-more summary {
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.learn-more p {
+    margin-top: 10px;
+    margin-right: 20px;
+    display: block;
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .concert-image {
+        width: 60vw; /* Increase width for smaller screens */
+        left: 0%; /* Adjust left margin */
+        top: 20px; /* Adjust top margin */
+        position: relative;
+        padding-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .concert-image {
+        width: 80vw; /* Make it take up more space */
+        left: 2%; /* Shift it slightly */
+        top: 0px; /* Adjust for better spacing */
+
+    }
+}
+
+nav {
+    font-family: 'unigeo64-regular';
+}
 /* Sidebar Navigation */
 .sidebar {
     position: fixed;
-    left: -350px; /* Hidden by default */
+    left: -350px;
     top: 0;
     width: 250px;
     height: 100%;
-    background: #222;
+    background: #ffffff;
     padding: 20px;
     transition: left 0.3s ease-in-out;
     z-index: 2;
 }
 
 .sidebar h3 {
-    color: white;
-    text-align: center;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    margin-top: 80px;
+    margin-left: 25px;
+    font-size: 25px;
 }
 
 .sidebar ul {
     list-style: none;
     padding: 0;
+    text-align: left;
+    margin-left: 20px;
+    font-size: 15px;
 }
 
 .sidebar ul li {
@@ -64,14 +193,15 @@ section {
 }
 
 .sidebar ul li a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     display: block;
     padding: 10px;
 }
 
 .sidebar ul li a:hover {
-    background: #444;
+    background: #9c5de4;
+    color: white;
 }
 
 /* Sidebar Toggle */
@@ -79,7 +209,6 @@ section {
     display: none;
 }
 
-/* When checkbox is checked, show the sidebar */
 #menu-toggle:checked ~ .sidebar {
     left: 0;
 }
@@ -97,7 +226,7 @@ section {
     z-index: 3;
 }
 
-/* Full-page overlay (for clicking outside the menu) */
+/* Full-page overlay (for closing menu when clicking outside) */
 .overlay {
     position: fixed;
     top: 0;
@@ -111,17 +240,36 @@ section {
     z-index: 1;
 }
 
-/* When menu is open, make the overlay clickable */
 #menu-toggle:checked ~ .overlay {
     opacity: 1;
     pointer-events: all;
 }
 
+#menu-toggle:checked ~ .menu-button {
+    color: rgb(0, 0, 0);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
 /* Responsive Design */
-@media (max-width: 400px) {
+@media (max-width: 768px) {
+    .concert-details {
+        column-count: 1;
+    }
+
     .menu-button {
         font-size: 16px;
         padding: 8px 15px;
+    }
+
+    main {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .concert-columns {
+        display: block; /* Stack the columns */
+        padding: 20px; /* Reduce padding for small screens */
     }
 }
 
@@ -132,4 +280,9 @@ section {
         row-gap: 60px;
         padding: 20px;
     }
+}
+
+footer {
+    margin-left: 30px;
+    font-family: 'unigeo64-regular';
 }
