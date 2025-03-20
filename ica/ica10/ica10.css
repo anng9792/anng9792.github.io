@@ -1,0 +1,11 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+#toggleImage {
+    width: 300px;
+    height: auto;
+    margin-top: 20px;
+}
