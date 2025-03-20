@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Silly story generator</title>
+
+    <style>
+            @font-face {
+        font-family: 'unigeo64-regular';
+        src: url('./TT\ Hoves\ Pro\ Trial\ Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        }
+    
+      body {
+        font-family: 'unigeo64-regular', sans-serif;
+        letter-spacing: .5;
+        width: 500px;
+        margin-left: 360px;
+        padding-top: 70px;
+        background-color: rgb(162, 160, 156);
+      }
+
+      h1 {
+        text-align: center;
+        margin: 0px;
+        position: absolute;
+        margin-left: 170px;
+      }
+
+      .enterName {
+        margin-top: 125px;
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      .country {
+        font-weight: bold;
+      }
+
+      .randomize {
+        font-size: 16px;
+      }
+
+      div {
+        padding-bottom: 20px;
+        text-align: center;
+        margin-left: 200px;
+      }
+
+      input[type="text"] {
+        padding: 5px;
+        width: 250px;
+      }
+
+      p {
+        background: #ffffff;
+        color: #5e2612;
+        padding: 35px;
+        visibility: hidden;
+        margin-left: 130px;
+        width: 400px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Random Story Generator</h1>
+    <div class="enterName">
+      <label for="customname">Enter custom name:</label>
+      <input id="customname" type="text" placeholder="" />
+    </div>
+    <div class="country">
+      <label for="us">US</label
+      ><input id="us" type="radio" name="ukus" value="us" checked />
+      <label for="uk">UK</label
+      ><input id="uk" type="radio" name="ukus" value="uk" />
+    </div>
+    <div>
+      <button class="randomize">Generate random story</button>
+    </div>
+    <!-- Thanks a lot to Willy Aguirre for his help with the code for this assessment -->
+    <p class="story"></p>
+    <script src="wa10.js" defer></script>
+  </body>
+</html>
