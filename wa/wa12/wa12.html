@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Song Recommendation</title>
+  <link rel="stylesheet" href="wa12.css">
+</head>
+<body>
+  <div class="song-box">
+    <h2>Random Song Recommendation</h2>
+    <img id="albumArt" src="" alt="Album Art" style="display: none;">
+    <p id="songName">Click below to discover a song!</p>
+    <p id="artistName"></p>
+    <div class="controls">
+      <button id="getSong">Get Song</button>
+      <audio id="preview" controls style="display: none;"></audio>
+    </div>    
+    <div id="loading" style="display: none;">Loading...</div>
+  </div>
+
+  <p class="explanation">
+    <strong>Extension:</strong> This version of the quote machine finds a random song using the iTunes Search API. It displays the song name, artist, and album cover, and if available, plays a short preview clip.
+  </p>
+
+  <script src="wa12.js"></script>
+</body>
+</html>
