@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  font-family: sans-serif;
+}
+
+h1 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  z-index: 1;
+  margin: 10px 0;
+  font-family: 'GTPro';
+  font-size: 150px;
+}
+
+canvas {
+  display: block;
+}
+
+
+@font-face {
+  font-family: 'GTPro';
+  src: url('/fonts/GTProelium.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  }
