@@ -93,7 +93,9 @@ function isColliding(rect1, rect2) {
 
 function attemptCatch(target) {
   if (Math.random() < 0.66) {
-    phoneNumber.value += target.dataset.number;
+    if (phoneNumber.value.length < 10) {
+      phoneNumber.value += target.dataset.number;
+    }
   } else {
     target.innerText = 'Miss!';
     setTimeout(() => {
@@ -116,7 +118,7 @@ resetButton.addEventListener('click', () => {
   phoneNumber.value = '';
 });
 
-const submit = document.getElementById('submitButton');
+const submit = document.getElementById('submit');
 const congratsMessage = document.getElementById('congratsMessage');
 
 submit.addEventListener('click', () => {
