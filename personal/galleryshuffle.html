@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shuffle Instagram Grid</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #fafafa;
+    }
+    input[type="file"] {
+      margin-bottom: 20px;
+    }
+    #gallery {
+        width: 630px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .grid-img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border: 0px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Shuffle Instagram Grid</h2>
+  <input type="file" id="imageUpload" multiple accept="image/*">
+  <button onclick="shuffleImages()">Shuffle & Display</button>
+
+  <div id="gallery"></div>
+
+  <script>
+    let originalImages = [];
+  
+    document.getElementById('imageUpload').addEventListener('change', function (e) {
+      originalImages = Array.from(e.target.files);
+      processImages(originalImages);
+    });
+  
+    async function processImages(files) {
+      const imageData = await Promise.all(
+        files.map(file => {
+          return new Promise(resolve => {
+            const reader = new FileReader();
+            reader.onload = () => resolve(reader.result);
+            reader.readAsDataURL(file);
+          });
+        })
+      );
+  
+      shuffleAndRender(imageData);
+    }
+  
+    function shuffleAndRender(imageArray) {
+      // Fisher-Yates shuffle
+      for (let i = imageArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [imageArray[i], imageArray[j]] = [imageArray[j], imageArray[i]];
+      }
+  
+      const gallery = document.getElementById('gallery');
+      gallery.innerHTML = ''; // clear existing images
+  
+      imageArray.forEach(dataUrl => {
+        const img = document.createElement('img');
+        img.src = dataUrl;
+        img.className = 'grid-img';
+        gallery.appendChild(img);
+      });
+    }
+  
+    // Shuffle button uses pre-loaded images
+    function shuffleImages() {
+      if (originalImages.length === 0) return;
+      processImages(originalImages);
+    }
+  </script>
+  
+
+</body>
+</html>
