@@ -115,3 +115,22 @@ const resetButton = document.getElementById('resetButton');
 resetButton.addEventListener('click', () => {
   phoneNumber.value = '';
 });
+
+const submit = document.getElementById('submitButton');
+const congratsMessage = document.getElementById('congratsMessage');
+
+submit.addEventListener('click', () => {
+  const number = phoneNumber.value;
+  if (number.length >= 10) {
+    congratsMessage.style.display = 'block';
+    congratsMessage.textContent = 'Congrats! You entered your number!';
+  } else {
+    congratsMessage.style.display = 'block';
+    congratsMessage.textContent = 'Still missing some digits!';
+  }
+
+  setTimeout(() => {
+    congratsMessage.style.display = 'none';
+  }, 3000);
+});
+

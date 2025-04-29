@@ -73,4 +73,19 @@ body {
   #resetButton:hover {
     background-color: #ff3b30;
   }
-    
+
+  #submit {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #ff6961;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  #submit:hover {
+    background-color: #ff3b30;
+  }
