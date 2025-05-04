@@ -10,6 +10,8 @@ let velocityX = 0;
 let velocityY = 0;
 let isDragging = false;
 let animationFrame;
+let hasCaught = false;
+
 
 pokeball.addEventListener('mousedown', (e) => {
   const rect = gameArea.getBoundingClientRect();
@@ -57,14 +59,21 @@ function animateThrow() {
     const ballRect = pokeball.getBoundingClientRect();
     const gameAreaRect = gameArea.getBoundingClientRect();
 
-    targets.forEach((target) => {
-      const targetRect = target.getBoundingClientRect();
-      if (isColliding(ballRect, targetRect)) {
-        attemptCatch(target);
-        cancelAnimationFrame(animationFrame);
-        resetBall();
+    if (!hasCaught) {
+      for (let i = 0; i < targets.length; i++) {
+        const targetRect = targets[i].getBoundingClientRect();
+        if (isColliding(ballRect, targetRect)) {
+          hasCaught = true;
+          attemptCatch(targets[i]);
+          cancelAnimationFrame(animationFrame);
+          resetBall();
+          break;
+        }
       }
-    });
+    }
+    
+    
+    
 
     if (
       ballRect.top > gameAreaRect.bottom ||
@@ -90,19 +99,44 @@ function isColliding(rect1, rect2) {
     rect1.top > rect2.bottom
   );
 }
-
 function attemptCatch(target) {
-  if (Math.random() < 0.66) {
-    if (phoneNumber.value.length < 10) {
-      phoneNumber.value += target.dataset.number;
+  const originalText = target.innerText;
+  target.innerHTML = '<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png" style="width: 60px; animation: shake 1s infinite;">';
+
+  setTimeout(() => {
+    const caught = Math.random() < 0.66;
+
+    if (caught) {
+      if (phoneNumber.value.length < 10) {
+        phoneNumber.value += target.dataset.number;
+
+        phoneNumber.classList.remove('pop-effect');  
+        void phoneNumber.offsetWidth;             
+        phoneNumber.classList.add('pop-effect');
+        
+              } else {
+        showLimitMessage();
+      }
+      target.innerText = originalText;
+    } else {
+      target.innerText = 'Miss!';
+      setTimeout(() => {
+        target.innerText = originalText;
+      }, 700);
     }
-  } else {
-    target.innerText = 'Miss!';
-    setTimeout(() => {
-      target.innerText = target.dataset.number;
-    }, 700);
-  }
+    hasCaught = false;
+  }, 1000);
 }
+
+function showLimitMessage() {
+  const limitMessage = document.getElementById('limitMessage');
+  limitMessage.style.display = 'block';
+  setTimeout(() => {
+    limitMessage.style.display = 'none';
+  }, 2000);
+}
+
+
 
 function resetBall() {
   pokeball.style.transition = 'all 0.4s ease';
@@ -116,8 +150,21 @@ const resetButton = document.getElementById('resetButton');
 
 resetButton.addEventListener('click', () => {
   phoneNumber.value = '';
-});
+  hasCaught = false;
 
+  targets.forEach((target) => {
+    target.innerText = target.dataset.number;
+  });
+
+  pokeball.style.transition = 'none';
+  pokeball.style.left = 'calc(50% - 25px)';
+  pokeball.style.bottom = '20px';
+  pokeball.style.top = '';
+  
+  setTimeout(() => {
+    pokeball.style.transition = 'all 0.4s ease';
+  }, 10);
+});
 const submit = document.getElementById('submit');
 const congratsMessage = document.getElementById('congratsMessage');
 
@@ -135,4 +182,5 @@ submit.addEventListener('click', () => {
     congratsMessage.style.display = 'none';
   }, 3000);
 });
+
 

@@ -44,6 +44,7 @@
     }
 
     .column.left {
+        flex: 0 0 22%;
       background-color: #1a1a1a;
       padding: 20px;
       display: flex;
@@ -51,14 +52,15 @@
       justify-content: space-between;
     }
 
+
     .logo {
   position: absolute;
   top: 155px;
-  left: 22px;
+  left: 31px;
   font-family: 'gt_proeliumbold';
-  font-size: 235px;
+  font-size: 244px;
   color: white;
-  letter-spacing: -2px;
+  letter-spacing: -8px;
   line-height: 1;
   z-index: 10;
   pointer-events: none;
@@ -110,7 +112,15 @@
       font-weight: bold;
     }
 
+    .column.middle {
+  flex: 0 0 46%; /* or whatever width you want */
+  max-width: 46%;
+  min-width: 46%;
+  position: relative;
+}
+
     .contact-column {
+        flex: 0 0 25%;
       background-color: white;
       color: black;
       display: flex;
@@ -125,7 +135,7 @@
     .top-nav {
       position: absolute;
       top: 40px;
-      left: 200px;
+      left: 250px;
       right: 10px;
       display: flex;
       gap: 100px;
@@ -150,6 +160,26 @@
   z-index: 5; /* Should be behind logo and nav text, but above the image */
   pointer-events: none; /* Let clicks pass through */
 }
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slideshow {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#slideshow-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+  display: block;
+}
+
 
     @media (max-width: 768px) {
       .container {
@@ -189,8 +219,9 @@
     </div>
     <div class="gradient-overlay"></div>
     <div class="column middle">
-      <img src="/personal/images/Cali.png" alt="Model" class="center-img">
-      <div class="top-nav">
+        <div class="slideshow">
+            <img id="slideshow-image" src="/personal/images/Cali.png" alt="Slide">
+          </div>      <div class="top-nav">
         <div>FASHION</div>
         <div>BEAUTY</div>
         <div>ADVERTISING</div>
@@ -202,5 +233,78 @@
       CONTACT
     </div>
   </div>
+  <script>
+    const images = [
+    '/personal/images/slide (1).JPEG',
+    '/personal/images/slide (1).jpg',
+    '/personal/images/slide (1).png',
+    '/personal/images/slide (2).JPEG',
+    '/personal/images/slide (2).jpg',
+    '/personal/images/slide (2).png',
+    '/personal/images/slide (3).JPEG',
+    '/personal/images/slide (3).jpg',
+    '/personal/images/slide (3).png',
+    '/personal/images/slide (4).JPEG',
+    '/personal/images/slide (4).jpg',
+    '/personal/images/slide (4).png',
+    '/personal/images/slide (5).JPEG',
+    '/personal/images/slide (5).jpg',
+    '/personal/images/slide (6).JPEG',
+    '/personal/images/slide (6).jpg',
+    '/personal/images/slide (7).JPEG',
+    '/personal/images/slide (7).jpg',
+    '/personal/images/slide (8).JPEG',
+    '/personal/images/slide (8).jpg',
+    '/personal/images/slide (9).JPEG',
+    '/personal/images/slide (9).jpg',
+    '/personal/images/slide (10).JPEG',
+    '/personal/images/slide (10).jpg',
+    '/personal/images/slide (11).JPEG',
+    '/personal/images/slide (11).jpg',
+    '/personal/images/slide (12).jpg',
+    '/personal/images/slide (13).jpg',
+    '/personal/images/slide (14).jpg',
+    '/personal/images/slide (15).jpg',
+    '/personal/images/slide (16).jpg',
+    '/personal/images/slide (17).jpg',
+    '/personal/images/slide (18).jpg',
+    '/personal/images/slide (19).jpg',
+    '/personal/images/slide (20).jpg',
+    '/personal/images/slide (21).jpg',
+    '/personal/images/slide (22).jpg',
+    '/personal/images/slide (23).jpg',
+    '/personal/images/slide (24).jpg',
+    '/personal/images/slide (25).jpg',
+    '/personal/images/slide (26).jpg',
+    '/personal/images/slide (27).jpg',
+    '/personal/images/slide (14).jpg'
+
+];
+  
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+  
+    const slideshowImage = document.getElementById('slideshow-image');
+    let currentIndex = 0;
+  
+    shuffleArray(images); // Shuffle once on load
+  
+    function showNextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      slideshowImage.classList.add('fade-out');
+  
+      setTimeout(() => {
+        slideshowImage.src = images[currentIndex];
+        slideshowImage.classList.remove('fade-out');
+      }, 500);
+    }
+  
+    setInterval(showNextImage, 4000); // Change every 4 seconds
+  </script>
+  
 </body>
 </html>

@@ -10,9 +10,24 @@
     <h1>Throw the Ball To Catch the Numbers!</h1>
     <input type="text" id="phoneNumber" placeholder="Your Number" disabled>
     <button id="submit">Submit</button>
-    <p id="congratsMessage" style="display: none; color: green; font-weight: bold;">Congrats! You entered your number!</p>
-        <button id="resetButton">Reset Number</button>
+    <p id="congratsMessage" style="display: none; color: rgb(255, 255, 255); font-weight: bold;">Congrats! You entered your number!</p>
+    <p id="limitMessage" style="display: none; color: rgb(255, 255, 255); font-weight: bold;">Only 10 digits allowed.</p>
+
+    <button id="resetButton">Reset Number</button>
     
+        <div id="sidePanel">
+          <h2>Instructions</h2>
+          <ol>
+            <li>Click and drag the PokeBall at the bottom of the screen upwards towards the number you want to catch.</li>
+            <li>Release your left mouse button to send the ball flying towards the number.</li>
+            <li>The speed of your throw affects how far your ball travels.</li>
+            <li>There's a chance your ball will "Miss!" but you can keep trying!</li>
+            <li>Click "Submit" when you've entered your number.</li>
+            <li>Click "Reset Number" to restart and try again.</li>
+          </ul>
+        </div>
+        
+
   <div id="gameArea">
     <div id="targets">
       <div class="target" data-number="1">1</div>
